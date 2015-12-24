@@ -13,7 +13,7 @@ var server = http.createServer((req, res) => {
 }).on('clientError', (e) => {
 	console.error('[' + new Date() + '] Client Error', e);
 });
-var port = 8000;
+let port = 8000;
 server.listen(port, () => {
 	console.log('Listening on ' + port);
 });
