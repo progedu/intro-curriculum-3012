@@ -1,6 +1,6 @@
 'use strict';
-let http = require('http');
-let server = http.createServer((req, res) => {
+const http = require('http');
+const server = http.createServer((req, res) => {
 	console.info('[' + new Date() + '] Requested by ' + req.connection.remoteAddress);
 	res.writeHead(200, {
 		'Content-Type': 'text/plain',
@@ -13,7 +13,7 @@ let server = http.createServer((req, res) => {
 }).on('clientError', (e) => {
 	console.error('[' + new Date() + '] Client Error', e);
 });
-let port = 8000;
+const port = 8000;
 server.listen(port, () => {
 	console.log('Listening on ' + port);
 });
