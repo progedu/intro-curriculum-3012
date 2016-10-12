@@ -35,5 +35,5 @@ Server Error と Client Error の起こし方 - tmux を使う
 [1]	$ curl -X EVENT http://localhost:8000
 	Ctrl + b → 0
 [0]	Client Error { [Error: Parse Error] bytesParsed: 1, code: 'HPE_INVALID_METHOD' }
-【説明】tmux で二重に仮想端末を立ち上げ、一方でサーバーを起動する。もう一方で、-X 適当なイベント名（EVENT）を付けて curl でアクセスする。（N予備校「HTTP のメソッド」）
+【説明】tmux で二重に仮想端末を立ち上げ、一方でサーバーを起動する。もう一方で、-X 適当なメソッド名（EVENT）を付けて curl でアクセスする。（N予備校「HTTP のメソッド」）
 */
