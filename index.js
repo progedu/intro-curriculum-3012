@@ -14,5 +14,25 @@ const server = http.createServer((req, res) => {
 });
 const port = 8000;
 server.listen(port, () => {
-	console.log('Listening on ' + port);
+	console.info('[' + new Date() + '] Listening on ' + port);
 });
+/*
+Server Error と Client Error の起こし方 - tmux を使う
+ - Server Error
+[/]	$ tmux
+[0]	$ node index.js
+	Ctrl + b → c
+[1]	$ node index.js
+	Ctrl + b → 0
+[0]	Server Error { [Error: listen EADDRINUSE :::8000]
+【説明】tmux で二重に仮想端末を立ち上げ、両方で同じポートからサーバーを起動させる。
+
+ - Client Error
+[/]	$ tmux		
+[0]	$ node index.js
+	Ctrl + b → c
+[1]	$ curl -X EVENT http://localhost:8000
+	Ctrl + b → 0
+[0]	Client Error { [Error: Parse Error] bytesParsed: 1, code: 'HPE_INVALID_METHOD' }
+【説明】tmux で二重に仮想端末を立ち上げ、一方でサーバーを起動する。もう一方で、-X 適当なメソッド名（EVENT）を付けて curl でアクセスする。（N予備校「HTTP のメソッド」）
+*/
