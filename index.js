@@ -14,5 +14,6 @@ const server = http.createServer((req, res) => {
 });
 const port = 8000;
 server.listen(port, () => {
-	console.log('Listening on ' + port);
+	console.info('[  ' + new Date() +'  ] に起動されました。 Listening on ' + port);
+	// 英語以外を入れると、実際の運用時にはトラブルが発生しそうですが。
 });
