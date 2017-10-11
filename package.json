@@ -1,11 +1,19 @@
 {
-  "name": "node-js-http",
+  "name": "js-http",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdm82542/intro-curriculum-3012.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hdm82542/intro-curriculum-3012/issues"
+  },
+  "homepage": "https://github.com/hdm82542/intro-curriculum-3012#readme",
+  "description": ""
 }
