@@ -7,6 +7,7 @@ const server = http.createServer((req, res) => {
 	});
 	res.write(req.headers['user-agent']);
 	res.end();
+
 }).on('error', (e) => {
 	console.error('[' + new Date() + '] Server Error', e);
 }).on('clientError', (e) => {
@@ -14,5 +15,5 @@ const server = http.createServer((req, res) => {
 });
 const port = 8000;
 server.listen(port, () => {
-	console.log('Listening on ' + port);
+	console.log('[' + new Date() + '] Listening on ' + port);
 });
