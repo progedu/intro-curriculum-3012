@@ -1,0 +1,18 @@
+[Mon Jan 29 2018 08:24:18 GMT+0000 (UTC)] Listening on 8000
+[Mon Jan 29 2018 08:25:50 GMT+0000 (UTC)] Listening on 8000
+[Mon Jan 29 2018 08:26:09 GMT+0000 (UTC)] Server Error { Error: listen EADDRINUSE :::8000
+    at Object.exports._errnoException (util.js:1018:11)
+    at exports._exceptionWithHostPort (util.js:1041:20)
+    at Server._listen2 (net.js:1258:14)
+    at listen (net.js:1294:10)
+    at Server.listen (net.js:1390:5)
+    at Object.<anonymous> (/home/ubuntu/workspace/intro-curriculum-3012/index.js:16:8)
+    at Module._compile (module.js:570:32)
+    at Object.Module._extensions..js (module.js:579:10)
+    at Module.load (module.js:487:32)
+    at tryModuleLoad (module.js:446:12)
+  code: 'EADDRINUSE',
+  errno: 'EADDRINUSE',
+  syscall: 'listen',
+  address: '::',
+  port: 8000 }
