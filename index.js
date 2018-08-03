@@ -1,4 +1,5 @@
 'use strict';
+
 const http = require('http');
 const server = http.createServer((req, res) => {
 	console.info('[' + new Date() + '] Requested by ' + req.connection.remoteAddress);
@@ -14,5 +15,5 @@ const server = http.createServer((req, res) => {
 });
 const port = 8000;
 server.listen(port, () => {
-	console.log('Listening on ' + port);
+	console.info('[' + new Date() + '] Listening on ' + port);
 });
