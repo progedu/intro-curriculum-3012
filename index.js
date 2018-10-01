@@ -5,6 +5,7 @@ const server = http.createServer((req, res) => {
 	res.writeHead(200, {
 		'Content-Type': 'text/plain; charset=utf-8'
 	});
+	res.write('[' + new Date() + ']\n'); //ブラウザにも時間を出してみる
 	res.write(req.headers['user-agent']);
 	res.end();
 }).on('error', (e) => {
@@ -14,5 +15,5 @@ const server = http.createServer((req, res) => {
 });
 const port = 8000;
 server.listen(port, () => {
-	console.log('Listening on ' + port);
+	console.info('[' + new Date() + '] Listening on ' + port);
 });
