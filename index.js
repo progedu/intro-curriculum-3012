@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
 }).on('error', (e) =>{
     console.error('[' + new Date() + '] Server Error', e);
 }).on('clientError', (e) =>{
-    console.error('[' + new Date() + '] Server Error', e);
+    console.error('[' + new Date() + '] Client Error', e);
 });
 const port = 8000;
 server.listen(port, () => {
