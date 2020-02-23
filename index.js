@@ -13,6 +13,7 @@ const server = http.createServer((req, res) => {
 	console.error('[' + new Date() + '] Client Error', e);
 });
 const port = 8000;
+const date = new Date();
 server.listen(port, () => {
-	console.log('Listening on ' + port);
+	console.info('Listening on ' + port + " " + date);
 });
