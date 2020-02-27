@@ -14,5 +14,5 @@ const server = http.createServer((req, res) => {
 });
 const port = 8000;
 server.listen(port, () => {
-	info.log( 'Listening on ' + port + "current time is " + new Date());
+	console.info( 'Listening on ' + port + "current time is " + new Date());
 });
