@@ -14,5 +14,5 @@ const server = http.createServer((req, res) => {
 });
 const port = 8002;
 server.listen(port, () => {
-	console.info('Listening on ' + port);
+	console.info('[' + new Date() +'] listening on' + port);
 });
