@@ -14,5 +14,5 @@ const server = http.createServer((req, res) => {
 });
 const port = 8000;
 server.listen(port, () => {
-	console.log('Listening on ' + port);
+	console.info(`Listening on ${port}, ${new Date().getMonth() + 1}月${new Date().getDate()}日 ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`);
 });
