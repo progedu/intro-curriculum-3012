@@ -14,5 +14,7 @@ const server = http.createServer((req, res) => {
 });
 const port = 8000;
 server.listen(port, () => {
-	console.log('Listening on ' + port);
+	//練習問題を解いた。
+	console.info("[" + new Date() + "] Listening on " + port);
+	
 });
