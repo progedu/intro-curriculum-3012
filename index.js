@@ -14,5 +14,7 @@ const server = http.createServer((req, res) => {
 });
 const port = 8000;
 server.listen(port, () => {
-	console.log('Listening on ' + port);
+	// ログをinfo関数で出力するよう修正
+	console.info('[' + new Date() + '] Listening on ' + port);
+	//console.log('Listening on ' + port);
 });
